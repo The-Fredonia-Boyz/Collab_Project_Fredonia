@@ -21,9 +21,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Movement input
-        Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")); // Gets wasd input to let the player move those directions respectively
+        Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical")); // Gets wasd input to let the player move those directions respectively
         Vector3 moveVelocity = moveInput.normalized * moveSpeed; // Formula for setting speed
         controller.Move(moveVelocity); // Calls controller to get movement
+        
         // Look input
         Ray ray = viewCamera.ScreenPointToRay(Input.mousePosition); // Get the mouses position from the view of the camera
         Plane groundPlane = new Plane(Vector3.up, Vector3.up); // Has no real function yet but will make the player view line up with the height of his weapon, just times the second vector 3 by whatever the objects height is

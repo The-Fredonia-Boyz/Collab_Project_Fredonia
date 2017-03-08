@@ -2,14 +2,14 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]// Any object with physics is going to need this, so I made it mandatory.
-public class PlayerController : MonoBehaviour {
-
+public class PlayerController : MonoBehaviour
+{
     PlayerController controller;
     Vector3 velocity; // Gets velocity
     Rigidbody myRigidbody;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         myRigidbody = GetComponent<Rigidbody>(); // Used for Getting RigidBody as a variable
     }
@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour {
         // Returns point value with heigh correction
         transform.LookAt(HeightCorrectedViewpoint);
     }
-    
+
     // Update is called once per frame
-    void FixedUpdate () //Using fixedupdate instead of update since it uses a consistent time between calls, is better for update that adjust physics
+    void FixedUpdate() //Using fixedupdate instead of update since it uses a consistent time between calls, is better for update that adjust physics
     {
         myRigidbody.MovePosition(myRigidbody.position + velocity * Time.fixedDeltaTime); // Makes the player able to move
     }
