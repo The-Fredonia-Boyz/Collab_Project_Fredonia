@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Tsar.unity
+- path: Assets/_Scenes/Tsar.unity
   isLoaded: 1
   isActive: 1

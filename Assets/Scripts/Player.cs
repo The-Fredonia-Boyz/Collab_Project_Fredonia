@@ -43,8 +43,8 @@ public class Player : MonoBehaviour
         }
 
         // Look input
-        Ray ray = viewCamera.ScreenPointToRay(Input.mousePosition); // Get the mouses position from the view of the camera
         Plane groundPlane = new Plane(Vector3.up, Vector3.up); // Has no real function yet but will make the player view line up with the height of his weapon, just times the second vector 3 by whatever the objects height is
+        Ray ray = viewCamera.ScreenPointToRay(Input.mousePosition); // Get the mouses position from the view of the camera
         float rayDistance; //  will makes sure the ray is within the cameras range
         if (groundPlane.Raycast(ray, out rayDistance))// Makes sure it's in the right boundries
         {
