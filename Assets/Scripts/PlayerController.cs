@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]// Any object with physics is going to need this, so I made it mandatory.
 public class PlayerController : MonoBehaviour
 {
+    public Transform landingShadow;
     PlayerController controller;
     Vector3 velocity; // Gets velocity
     Rigidbody myRigidbody;
